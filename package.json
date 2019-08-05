@@ -1,0 +1,43 @@
+{
+  "name": "prismic-universal-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/js/compiled/server.js",
+  "scripts": {
+    "test:lint": "eslint src/",
+    "test": "npm run test:lint",
+    "start": "npm run build && node public/js/compiled/server.js",
+    "start:dev": "export NODE_ENV=development && nodemon public/js/compiled/server.js",
+    "build": "NODE_ENV=production webpack -p --profile --display-modules --optimize-minimize",
+    "build:dev": "webpack -d",
+    "build:dev:watch": "webpack -d --watch"
+  },
+  "author": "Luciano Mammino",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "ejs": "^2.5.2",
+    "express": "5.0.0-alpha.5",
+    "net": "^1.0.2",
+    "prismic-javascript": "^1.4.0",
+    "prismic-reactjs": "^0.2.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.1.2"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.1",
+    "babel-register": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0",
+    "nodemon": "^1.11.0",
+    "webpack": "^3.0.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
